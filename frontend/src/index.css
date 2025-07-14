@@ -1,0 +1,227 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+	/* Login */
+  
+	.input-login{
+    	@apply w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500;
+  	}
+
+	.login-box {
+    	@apply bg-[#ffffffe5] rounded-[12px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] backdrop-blur-sm p-8;
+  	}
+
+	.text-iniciarSesion {
+		@apply text-[24px] leading-8 font-bold text-center tracking-[-0.6px];
+		@apply bg-gradient-to-r from-blue-600 to-pink-600;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.login-subtext {
+		@apply text-[14px] leading-5 font-normal text-center text-slate-500;
+	}
+
+	.label-login {
+  		@apply text-[14px] leading-5 font-medium;
+  		color: #1E293B;
+	}
+
+	.input-login {
+		@apply w-full h-10 px-4 rounded-lg text-sm outline-none;
+  		background-color: #F9F9FB;
+  		border: 1px solid #BFDBFE;
+	}
+	.input-group {
+  		@apply flex items-center w-[405px] h-[40px] rounded-[10px] bg-[#F9F9FB] border border-[#BFDBFE] px-3 gap-3;
+	}
+
+	.icon-input {
+  		@apply w-4 h-4 opacity-100;
+	}
+
+	.input-text {
+  		@apply flex-1 bg-transparent outline-none text-sm font-normal text-gray-700 placeholder:text-gray-400;
+	}
+
+	.btn-login{
+    	@apply w-full mt-4 text-white py-2 rounded-[10px] transition 
+           bg-gradient-to-r from-[#3B82F6] to-[#EC4899] hover:opacity-90 
+           text-center font-medium text-[14px] leading-5;
+	}
+  
+	/* Header */
+	.header-main{
+  		@apply bg-[#FFFFFFE5] rounded-[12px] h-[100px] w-full px-6 flex items-center justify-between backdrop-blur-sm;
+  		box-shadow: 0px 10px 15px -3px #0000001A, 0px 4px 6px -4px #0000001A;
+	}
+
+	.title-gestion{
+		@apply text-[24px] leading-8 font-bold tracking-[-0.6px] align-middle;
+    	@apply bg-gradient-to-r from-[#2563EB] to-[#DB2777];
+    	-webkit-background-clip: text;
+    	-webkit-text-fill-color: transparent;
+	}
+
+	.subtitle-bienvenido{
+    	@apply text-[14px] leading-5 font-normal align-middle text-gray-600;
+  	}
+
+  	.user-highlight {
+    	@apply font-semibold text-[#2563EB];
+  	}
+
+	.btn-logout {
+  		@apply flex items-center gap-2 px-4 py-2 border rounded-md text-[14px] font-medium leading-5 transition;
+  		@apply bg-[#F9F9FB] border-[#EF4444] text-[#EF4444];
+	}
+
+  	/* Toolbar */
+	.toolbar-container{
+  		@apply w-full h-[88px] rounded-[12px] bg-[#FFFFFFE5] 
+        shadow-[0_4px_6px_-4px_#0000001A] shadow-[0_10px_15px_-3px_#0000001A] 
+        backdrop-blur-sm px-6 flex items-center justify-between;
+	}
+
+	.search-container{
+		@apply flex items-center w-[448px] h-[40px] rounded-[10px] bg-[#F9F9FB] border border-[#BFDBFE] px-3 gap-3;
+	}
+
+	.search-icon{
+		@apply w-4 h-4 opacity-100;
+	}
+
+	.search-input{
+		@apply flex-1 bg-transparent outline-none text-sm font-normal text-gray-700 placeholder:text-gray-400;
+	}
+
+  	.btn-newProd{
+  		@apply flex items-center justify-center gap-2 
+        		w-[166px] h-10 rounded-[10px] 
+        		bg-gradient-to-r from-[#EC4899] to-[#3B82F6]
+        		text-[14px] leading-5 font-medium text-white 
+        		transition hover:opacity-90;
+	}
+
+	/* ProductList */
+
+	.productlist-container{
+  		@apply w-full rounded-[12px] bg-[#ffffffe5] 
+        	shadow-[0_4px_6px_-4px_#0000001a,0_10px_15px_-3px_#0000001a] 
+        	backdrop-blur-sm p-4;
+	}
+
+	.productlist-title{
+  		@apply text-[18px] leading-[28px] font-semibold tracking-[-0.45px] text-[#1E293B] 
+        flex items-center gap-2 pl-4 pt-3;
+	}
+
+	.pl-table-header-row{
+		@apply border-b border-[#DBEAFE] h-12;
+	}
+
+	.pl-table-header-cell{
+		@apply text-[14px] leading-5 font-semibold text-[#1D4ED8] px-4 py-2;
+	}
+
+	.pl-row{
+    	@apply h-[69px] border-b border-[#EBF4FF] text-sm;
+  	}
+
+  	.pl-cell-name{
+    	@apply font-medium text-[14px] leading-5 text-[#1E40AF];
+  	}
+
+  	.pl-cell-desc{
+    	@apply font-normal text-[14px] leading-[22.75px] text-[#64748B];
+  	}
+
+  	.pl-cell-precio{
+    	@apply font-semibold text-[14px] leading-5 text-[#2563EB];
+  	}
+
+	.pl-btn-show{
+    	@apply w-[42px] h-[36px] rounded-[10px] bg-[#F9F9FB] border flex items-center 
+		justify-center border-[#BFDBFE]
+  	}
+
+  	.pl-btn-delete{
+    	@apply w-[42px] h-[36px] rounded-[10px] bg-[#F9F9FB] border flex items-center 
+		justify-center border-[#EF4444]
+  	}
+
+  	.pl-icon-btn{
+    	@apply w-5 h-5;
+  	}
+
+	/* createProduct */
+	.crtProd-modal{
+    	@apply w-[500px] rounded-[12px] border border-[#E2E8F0] 
+        backdrop-blur-sm p-6 relative z-50 flex flex-col;
+    	background-color: #FFFFFFF2;
+    	box-shadow: 
+      	0px 4px 6px -4px #0000001A,
+      	0px 10px 15px -3px #0000001A;
+  	}
+
+  	/* titulo */
+	.crtProd-title{
+  		@apply text-[22px] leading-[28px] font-bold tracking-[-0.5px];
+  		font-family: 'Inter', sans-serif;
+  		font-weight: 700;
+  		letter-spacing: -0.5px;
+  		vertical-align: middle;
+  		background: linear-gradient(90deg, #2563EB 0%, #DB2777 100%);
+  		-webkit-text-fill-color: transparent;
+  		-webkit-background-clip: text;
+  		line-height: 28px;
+  		display: inline-block;
+	}
+
+
+  	/* subtitutlo */
+	.crtProd-subtitle {
+  		@apply text-[14px] leading-5 font-normal;
+  		font-family: 'Inter', sans-serif;
+  		color: #64748B;
+  		vertical-align: middle;
+  		font-weight: 400;
+  		font-size: 14px;
+  		letter-spacing: 0;
+  		line-height: 20px;
+	}
+
+	.crtProd-header {
+  		@apply mb-4 space-y-2;
+	}
+
+
+	.crtProd-body {
+  		@apply flex flex-col gap-4;
+	}
+
+	
+	/* ProductDetails */
+	.prodDet-modal {
+  		@apply w-[500px] h-[416.75px] bg-[#FFFFFFF2] border border-[#E2E8F0] rounded-[12px] 
+         shadow-[0px_4px_6px_-4px_rgba(0,0,0,0.1),0px_10px_15px_-3px_rgba(0,0,0,0.1)] 
+         backdrop-blur-[4px] p-6;
+	}
+
+	/* titulo */
+	.prodDet-title{
+  		@apply text-[22px] leading-[28px] font-bold tracking-[-0.5px];
+  		font-family: 'Inter', sans-serif;
+  		font-weight: 700;
+  		letter-spacing: -0.5px;
+  		vertical-align: middle;
+  		background: linear-gradient(90deg, #2563EB 0%, #DB2777 100%);
+  		-webkit-text-fill-color: transparent;
+  		-webkit-background-clip: text;
+  		line-height: 28px;
+  		display: inline-block;
+	}
+}
